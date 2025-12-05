@@ -76,6 +76,7 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: var(--spacing-200);
+  text-align: center;
 }
 
 .header__title .title {
@@ -92,11 +93,9 @@ main {
   font: var(--mobile-text-preset4);
   color: var(--color-grey-500);
   letter-spacing: var(--mobile-text-preset4-letter-spacing);
-  text-align: center;
 }
 
-.container {
-  max-width: 314px;
+.card-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -104,6 +103,7 @@ main {
 }
 
 .card {
+  max-width: 314px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -163,16 +163,48 @@ main {
   overflow: hidden;
 }
 
-.bar--supervisor::before {
+.card--supervisor::before {
   background-color: var(--color-cyan);
 }
 
-.bar--team-builder::before {
+.card--team-builder::before {
   background-color: var(--color-red);
 }
-.bar--karma::before {
+.card--karma::before {
   background-color: var(--color-orange);
 }
-.bar--calculator::before {
+.card--calculator::before {
   background-color: var(--color-blue);
+}
+
+@media (min-width: 768px) {
+  .header {
+    max-width: 540px;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    grid-template-areas:
+      "team-builder team-builder"
+      "supervisor karma"
+      "calculator calculator";
+    gap: var(--spacing-400);
+  }
+
+  .card--supervisor {
+    grid-area: supervisor;
+  }
+
+  .card--team-builder {
+    grid-area: team-builder;
+  }
+  .card--karma {
+    grid-area: karma;
+  }
+  .card--calculator {
+    grid-area: calculator;
+  }
 }
