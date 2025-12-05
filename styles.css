@@ -58,20 +58,22 @@ body {
 }
 
 main {
-  max-width: 316px;
-  margin-top: 56px;
-  margin-bottom: 46px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 60px;
+  padding-top: 56px;
+  padding-bottom: 46px;
 }
 
 .header {
+  max-width: 316px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   gap: var(--spacing-200);
 }
 
@@ -89,9 +91,11 @@ main {
   font: var(--mobile-text-preset4);
   color: var(--color-grey-500);
   letter-spacing: var(--mobile-text-preset4-letter-spacing);
+  text-align: center;
 }
 
 .container {
+  max-width: 314px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -105,8 +109,7 @@ main {
   align-items: flex-end;
   gap: var(--spacing-400);
   padding: 32px;
-  border-radius: 8px;
-  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  padding-bottom: 48px;
 }
 
 .card img {
@@ -132,8 +135,31 @@ main {
   color: var(--color-grey-400);
 }
 
+.card-outer {
+  border-radius: 8px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+}
+
 .bar-supervisor {
   height: 4px;
   width: 100%;
   background-color: var(--color-cyan);
+}
+
+.bar-team-builder {
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-red);
+}
+.bar-karma {
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-orange);
+}
+.bar-calculator {
+  height: 4px;
+  width: 100%;
+  background-color: var(--color-blue);
 }
