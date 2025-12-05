@@ -209,7 +209,7 @@ main {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
