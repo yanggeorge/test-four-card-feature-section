@@ -208,3 +208,30 @@ main {
     grid-area: calculator;
   }
 }
+
+@media (min-width: 1280px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    grid-template-areas:
+      "supervisor team-builder karma"
+      "supervisor calculator karma";
+    gap: var(--spacing-400);
+  }
+
+  .card--supervisor {
+    grid-area: supervisor;
+  }
+
+  .card--team-builder {
+    grid-area: team-builder;
+  }
+  .card--karma {
+    grid-area: karma;
+  }
+  .card--calculator {
+    grid-area: calculator;
+  }
+}
